@@ -6,6 +6,7 @@
 from time import sleep
 from collections import defaultdict
 from collections.abc import Callable
+from time import sleep
 from typing import Literal
 from warnings import warn
 
@@ -1115,6 +1116,8 @@ def count_connections(
                 end_connections_column: "int64",
             },
         )
+
+    sleep(1)
 
     geoms = input_gdf.geometry.to_numpy()
 
