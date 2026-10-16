@@ -30,10 +30,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv sync --no-group lint --extra=cli
-
-      - name: Install dependencies
-        run: |
           python -m pip install -q uv
           python -m uv sync --no-group lint --extra=cli
 
