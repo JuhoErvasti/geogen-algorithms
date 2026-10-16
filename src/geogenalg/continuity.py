@@ -3,9 +3,9 @@
 #  This file is part of geogen-algorithms.
 #
 #  SPDX-License-Identifier: MIT
-from time import sleep
 from collections import defaultdict
 from collections.abc import Callable
+from time import sleep
 from typing import Literal
 from warnings import warn
 
@@ -1116,7 +1116,7 @@ def count_connections(
             },
         )
 
-    sleep(0.1)
+    sleep(1)
 
     geoms = input_gdf.geometry.to_numpy()
 

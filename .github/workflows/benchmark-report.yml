@@ -40,7 +40,7 @@ jobs:
 
       - name: Benchmark head (PR branch)
         run: |
-          git checkout ${{ github.base_ref }}
+          git checkout ${{ github.head_ref }}
           .venv/bin/python -m pytest tests/bench --benchmark-only --benchmark-json=head.json -k count_conn
 
       - name: Compare results and produce report
