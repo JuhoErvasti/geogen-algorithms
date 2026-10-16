@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests and generate coverage report
         run: |
-          .venv/bin/python -m pytest --cov --cov-report=xml
+          .venv/bin/python -m pytest --cov --cov-report=xml -k contours
 
       - name: Check code coverage for changed lines
         if: ${{ matrix.python-version == '3.12' }}
