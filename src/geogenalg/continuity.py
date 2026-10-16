@@ -1116,6 +1116,8 @@ def count_connections(
             },
         )
 
+    sleep(0.1)
+
     geoms = input_gdf.geometry.to_numpy()
 
     start_points = get_point(geoms, 0)
