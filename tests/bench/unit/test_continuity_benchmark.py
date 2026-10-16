@@ -4,8 +4,6 @@
 #
 #  SPDX-License-Identifier: MIT
 
-from time import sleep
-
 import pytest
 from pytest_benchmark.fixture import BenchmarkFixture
 
@@ -45,8 +43,6 @@ def test_count_connections(
     test_input = TestInputData(input_uri=line_network_input.to_input(layer))
 
     gdf, _, _ = test_input.read()
-
-    sleep(0.5)
 
     result = benchmark(count_connections, gdf)
 
