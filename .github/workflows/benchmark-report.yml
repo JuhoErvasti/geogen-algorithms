@@ -38,12 +38,12 @@ jobs:
       - name: Benchmark base
         run: |
           git checkout ${{ github.base_ref }}
-          uv run pytest tests/bench --benchmark-only --benchmark-json=base_bench.json
+          uv run pytest tests/bench --benchmark-only --benchmark-json=base.json -k contours
 
       - name: Benchmark head (PR branch)
         run: |
           git checkout ${{ github.head_ref }}
-          uv run pytest tests/bench --benchmark-only --benchmark-json=head_bench.json
+          uv run pytest tests/bench --benchmark-only --benchmark-json=head.json -k contours
 
       - name: Compare results and produce report
         run: |
