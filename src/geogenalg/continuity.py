@@ -3,6 +3,7 @@
 #  This file is part of geogen-algorithms.
 #
 #  SPDX-License-Identifier: MIT
+from time import sleep
 from collections import defaultdict
 from collections.abc import Callable
 from time import sleep
